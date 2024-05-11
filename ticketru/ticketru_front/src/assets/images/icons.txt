@@ -1,0 +1,5 @@
+https://icons.getbootstrap.com/?q=home
+https://react-icons.github.io/react-icons/icons?name=bs
+https://icons8.com/icons/set/elo-card
+
+brands - https://www.svgrepo.com/svg/328138/hiper

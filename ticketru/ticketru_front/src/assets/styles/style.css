@@ -1,0 +1,304 @@
+/*Amarelo #F6C500 Preto #000000 Branco #FFFFFF Cinza claro #E8E8E8 */
+:root {
+    --custom-primary-start: #8dc63f;
+    --custom-primary-end: #00a651;
+}
+
+.your-button-class:hover {
+    --bs-btn-hover-border-color: inherit !important;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply the gradient background to an element */
+.bg-e-gradient {
+    background: linear-gradient(
+        var(--custom-primary-start),
+        var(--custom-primary-end)
+    );
+}
+
+/* apply hover effect to an element, this an simple senstion of color change */
+.bg-e-gradient:hover {
+    background: linear-gradient(
+        var(--custom-primary-end),
+        var(--custom-primary-start)
+    );
+    transition: all 0.3s ease-in-out;
+}
+
+.bg-e-gradient-black {
+    background: linear-gradient(#000000, #000000);
+}
+
+/* Change the primary color of specific elements */
+.primary-button {
+    background-color: var(--custom-primary-start);
+}
+
+.primary-heading {
+    color: var(--custom-primary-end);
+}
+
+rounded-0 .text-black {
+    color: #000000;
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+.text-yellow {
+    color: #f6c500;
+}
+
+.text-danger {
+    color: #f2142a !important;
+}
+
+.btn-next {
+    background-color: #f6c500 !important;
+    color: #ffffff !important;
+    border: 1px solid #000000 !important;
+}
+
+.btn-next:hover {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border: 1px solid #000000 !important;
+}
+
+.btn-previous {
+    background-color: #e8e8e8 !important;
+    color: #000000 !important;
+    border: 1px solid #f6c500 !important;
+}
+
+.btn-previous:hover {
+    background-color: #f6c500 !important;
+    color: #ffffff !important;
+    border: 1px solid #000000 !important;
+}
+
+.bg-e-gradient-yellow-black {
+    background: linear-gradient(#f6c500, #000000);
+}
+
+.bg-black {
+    background-color: #000000 !important;
+}
+
+.bg-gray {
+    background-color: #e8e8e8 !important;
+}
+
+.bg-white {
+    background-color: #ffffff !important;
+    /* take off the border and shadow */
+    border: 1px solid #ffffff !important;
+    box-shadow: none !important;
+}
+
+.bg-yellow {
+    background-color: #f6c500 !important;
+}
+
+.bg-violet {
+    background-color: #873c89 !important;
+    border: none;
+}
+
+.css-dip3t8 {
+    background-color: #f6c500 !important;
+}
+
+/* login  #f8f9fa   e9ecef*/
+
+.bg-md-or-sm {
+    border: none !important;
+    background-color: #e9ecef !important;
+}
+
+.bg-image {
+    background-image: url('./assets/images/login-background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    background-attachment: fixed !important;
+}
+
+apply background color e8e8e8 to the form,
+.login-sm {
+    background-color: #e8e8e8 !important;
+}
+
+.bg-horizontal {
+    background-image: url('./assets/images/bg-h.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.bg-light-gray {
+    background-color: #e8e8e8;
+}
+
+.z-index-5 {
+    z-index: 50000;
+}
+
+.z-index-4 {
+    z-index: 4;
+}
+
+.z-index-3 {
+    z-index: 3;
+}
+
+.z-index-2 {
+    z-index: 2;
+}
+
+.z-index-1 {
+    z-index: 1;
+}
+
+.FormControl {
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+}
+
+.pro-sidebar {
+    background-color: white;
+}
+
+.sidebar-wrapper {
+    position: fixed;
+    z-index: 9999;
+    width: 250px;
+    height: 100%;
+    top: 0;
+    left: -250px;
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebar-wrapper.show {
+    left: 0;
+}
+
+.sidebar-logout {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.sidebar-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 130px;
+    background-color: #f6c500;
+    color: #000000;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 130px;
+    background-color: #f6c500;
+    color: #000000;
+}
+
+.content-container {
+    overflow-y: auto;
+}
+
+.content-wrapper {
+    margin-top: 56px; /* adjust the value to match your navbar height */
+}
+
+.logo {
+    display: block;
+    width: 150px;
+    height: 50px;
+    background-image: url('./assets/images/logo.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.logo-footer {
+    display: block;
+    width: 140px;
+    height: 40px;
+    background-image: url('./assets/images/logo.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 0;
+}
+
+/* not found page */
+.not-found-wrapper {
+    background-color: #f6c500;
+    color: #000000;
+    height: 100vh;
+}
+
+.not-found-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.not-found-title {
+    font-size: 8rem;
+    font-weight: bold;
+}
+
+.not-found-subtitle {
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+/* user data - small lightgray text with rem */
+div.userdata > p {
+    font-size: 1rem;
+    color: #e8e8e8;
+}
+
+.smaller-image {
+    @media (max-width: 768px) {
+        max-width: 100px;
+        max-height: 100px;
+    }
+}
+
+/* home */
+.rounded-6 {
+    border-radius: 50% !important;
+}
+
+.plr-10 {
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+}
+
+.plf-15 {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
