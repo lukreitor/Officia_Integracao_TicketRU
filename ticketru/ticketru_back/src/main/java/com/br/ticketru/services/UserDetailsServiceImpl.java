@@ -1,4 +1,4 @@
-package br.com.Gabriel.services;
+package com.br.ticketru.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -6,7 +6,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import br.com.Gabriel.entities.User;
+import com.br.ticketru.entities.User;
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {

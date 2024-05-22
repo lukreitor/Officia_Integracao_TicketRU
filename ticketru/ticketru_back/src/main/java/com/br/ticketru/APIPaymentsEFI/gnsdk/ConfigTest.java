@@ -1,4 +1,4 @@
-package br.com.Gabriel.APIPaymentsEFI.gnsdk;
+package com.br.ticketru.APIPaymentsEFI.gnsdk;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;

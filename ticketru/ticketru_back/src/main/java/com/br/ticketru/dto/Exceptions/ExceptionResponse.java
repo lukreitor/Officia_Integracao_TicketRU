@@ -1,4 +1,4 @@
-package br.com.Gabriel.dto.Exceptions;
+package com.br.ticketru.dto.Exceptions;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -9,10 +9,10 @@ import lombok.Setter;
 @Getter
 @Setter
 public class ExceptionResponse implements Serializable {
-   
+
     private static final long serialVersionUID = 1L;
 
-     private Date timestamp;
+    private Date timestamp;
     private String message;
     private String details;
 
@@ -23,6 +23,4 @@ public class ExceptionResponse implements Serializable {
         this.details = details;
     }
 
-   
-    
 }

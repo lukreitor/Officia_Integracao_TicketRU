@@ -1,4 +1,4 @@
-package br.com.Gabriel.APIPaymentsEFI.gerencianet.pix.service;
+package com.br.ticketru.APIPaymentsEFI.gerencianet.pix.service;
 
 import java.io.FileNotFoundException;
 import java.time.LocalDateTime;
@@ -14,7 +14,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.springframework.stereotype.Service;
 
-import br.com.Gabriel.APIPaymentsEFI.gerencianet.Credentials;
+import com.br.ticketru.APIPaymentsEFI.gerencianet.Credentials;
+
 import br.com.gerencianet.gnsdk.Gerencianet;
 import br.com.gerencianet.gnsdk.exceptions.GerencianetException;
 
@@ -45,7 +46,7 @@ public class PixService {
         String nome = "Leonardo da Silva Sena";
         String chavePix = "auxlucas57@gmail.com";
         String solicitacaoPagador = "Serviço realizado";
-        Credentials credentials = new Credentials();
+        com.br.ticketru.APIPaymentsEFI.gerencianet.Credentials credentials = new Credentials();
 
         JSONObject options = new JSONObject();
         options.put("client_id", credentials.getClientId());

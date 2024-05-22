@@ -1,4 +1,4 @@
-package br.com.Gabriel.APIPaymentsEFI.gerencianet;
+package com.br.ticketru.APIPaymentsEFI.gerencianet;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -16,7 +16,7 @@ public class Credentials {
 
     public Credentials() throws FileNotFoundException {
         FileInputStream fileInputStream = new FileInputStream(
-                "C:\\Users\\auxlu\\OneDrive\\Documentos\\Workspaces\\React\\TicketRU\\TicketRU_BackEnd\\SpringTicketRU\\src\\main\\java\\br\\com\\Gabriel\\APIPaymentsEFI\\gerencianet\\credentials.json");
+                "src\\main\\java\\com\\br\\ticketru\\APIPaymentsEFI\\gerencianet\\credentials.json");
         JSONTokener tokener = new JSONTokener(fileInputStream);
         JSONObject credentials = new JSONObject(tokener);
         try {

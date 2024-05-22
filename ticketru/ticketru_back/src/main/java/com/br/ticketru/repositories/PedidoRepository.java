@@ -1,12 +1,12 @@
-package br.com.Gabriel.repositories;
+package com.br.ticketru.repositories;
 
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import br.com.Gabriel.entities.Pedido;
-import br.com.Gabriel.entities.User;
+import com.br.ticketru.entities.Pedido;
+import com.br.ticketru.entities.User;
 
 //import jakarta.transaction.Transactional;
 @Repository

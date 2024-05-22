@@ -1,4 +1,4 @@
-package br.com.Gabriel.APIPaymentsEFI.gerencianet.pix.service;
+package com.br.ticketru.APIPaymentsEFI.gerencianet.pix.service;
 
 import java.io.FileNotFoundException;
 import java.util.HashMap;
@@ -6,7 +6,8 @@ import java.util.HashMap;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import br.com.Gabriel.APIPaymentsEFI.gerencianet.Credentials;
+import com.br.ticketru.APIPaymentsEFI.gerencianet.Credentials;
+
 import br.com.gerencianet.gnsdk.Gerencianet;
 import br.com.gerencianet.gnsdk.exceptions.GerencianetException;
 

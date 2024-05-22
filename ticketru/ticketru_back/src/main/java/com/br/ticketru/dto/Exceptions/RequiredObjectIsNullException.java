@@ -1,4 +1,4 @@
-package br.com.Gabriel.dto.Exceptions;
+package com.br.ticketru.dto.Exceptions;
 
 //RequiredObjectIsNullException
 import org.springframework.http.HttpStatus;

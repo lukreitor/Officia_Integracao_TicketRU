@@ -1,4 +1,4 @@
-package br.com.Gabriel.APIPaymentsEFI.gnsdk;
+package com.br.ticketru.APIPaymentsEFI.gnsdk;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.times;

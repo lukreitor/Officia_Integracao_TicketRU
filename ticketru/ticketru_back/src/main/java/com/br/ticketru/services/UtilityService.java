@@ -1,4 +1,4 @@
-package br.com.Gabriel.services;
+package com.br.ticketru.services;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -11,14 +11,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-//import com.br.photos.photosCP.Model.Role;
+import com.br.ticketru.config.JwtService;
+import com.br.ticketru.dto.AuthenticationUserDTO;
+import com.br.ticketru.entities.User;
+import com.br.ticketru.repositories.UserRepository;
+import com.br.ticketru.utils.HashManagerUtils;
 
-import br.com.Gabriel.config.JwtService;
-import br.com.Gabriel.entities.User;
-import br.com.Gabriel.repositories.UserRepository;
-import br.com.Gabriel.utils.HashManagerUtils;
-import br.com.Gabriel.dto.Mappers.ERole;
-import br.com.Gabriel.dto.AuthenticationUserDTO;
+//import com.br.photos.photosCP.Model.Role;
 
 @Service
 public class UtilityService {
@@ -35,7 +34,7 @@ public class UtilityService {
         return userRepository.findByRaIgnoreCase(id);
     }
 
-    public ResponseEntity<String> execute(AuthenticationUserDTO user) {
+    public ResponseEntity<String> execute(com.br.ticketru.dto.AuthenticationUserDTO user) {
         System.out.println("ra: " + user.getRa());
 
         User result = findByRa(user.getRa());

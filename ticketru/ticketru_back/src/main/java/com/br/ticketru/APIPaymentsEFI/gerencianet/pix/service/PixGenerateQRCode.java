@@ -1,11 +1,10 @@
-package br.com.Gabriel.APIPaymentsEFI.gerencianet.pix.service;
+package com.br.ticketru.APIPaymentsEFI.gerencianet.pix.service;
 
 import java.awt.Desktop;
 import java.util.HashMap;
 import java.util.Map;
 import javax.imageio.ImageIO;
 
-import br.com.Gabriel.APIPaymentsEFI.gerencianet.Credentials;
 import br.com.gerencianet.gnsdk.Gerencianet;
 import br.com.gerencianet.gnsdk.exceptions.GerencianetException;
 
@@ -16,7 +15,7 @@ import java.io.FileNotFoundException;
 public class PixGenerateQRCode {
     public static void main(String[] args) throws FileNotFoundException {
 
-        Credentials credentials = new Credentials();
+        com.br.ticketru.APIPaymentsEFI.gerencianet.Credentials credentials = new com.br.ticketru.APIPaymentsEFI.gerencianet.Credentials();
 
         HashMap<String, Object> options = new HashMap<String, Object>();
         options.put("client_id", credentials.getClientId());

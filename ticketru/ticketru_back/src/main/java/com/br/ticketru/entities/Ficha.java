@@ -1,4 +1,4 @@
-package br.com.Gabriel.entities;
+package com.br.ticketru.entities;
 
 import java.io.Serializable;
 
@@ -10,7 +10,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Ficha implements Serializable{
+public class Ficha implements Serializable {
 
 	/**
 	 * 
@@ -20,8 +20,5 @@ public class Ficha implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	public Double preco = 3.50;
-	
-	
-	
-	
+
 }

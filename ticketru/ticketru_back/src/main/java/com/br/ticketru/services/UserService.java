@@ -1,4 +1,4 @@
-package br.com.Gabriel.services;
+package com.br.ticketru.services;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,11 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.crossstore.ChangeSetPersister.NotFoundException;
 import org.springframework.stereotype.Service;
 
-import br.com.Gabriel.entities.User;
-import br.com.Gabriel.repositories.UserRepository;
-import br.com.Gabriel.utils.*;
-import br.com.Gabriel.dto.Exceptions.HandlerException;
-import br.com.Gabriel.dto.Mappers.*;
+import com.br.ticketru.dto.Exceptions.HandlerException;
+import com.br.ticketru.dto.Mappers.ERole;
+import com.br.ticketru.entities.User;
+
+import com.br.ticketru.repositories.UserRepository;
+import com.br.ticketru.utils.HashManagerUtils;
 
 //@Transactional
 @Service

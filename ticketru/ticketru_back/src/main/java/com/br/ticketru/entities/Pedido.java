@@ -1,19 +1,17 @@
 
-package br.com.Gabriel.entities;
+package com.br.ticketru.entities;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
-import java.time.Instant;
+
 import java.util.Objects;
 
 import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.SQLDelete;
+
 import org.hibernate.annotations.UpdateTimestamp;
-import org.hibernate.annotations.Where;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.br.ticketru.dto.Mappers.EStatus;
 
-import br.com.Gabriel.dto.Mappers.EStatus;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -25,7 +23,6 @@ import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
-import br.com.Gabriel.entities.Ficha;
 
 @Entity
 @Getter

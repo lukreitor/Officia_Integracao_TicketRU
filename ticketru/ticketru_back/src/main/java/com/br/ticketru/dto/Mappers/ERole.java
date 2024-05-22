@@ -1,4 +1,4 @@
-package br.com.Gabriel.dto.Mappers;
+package com.br.ticketru.dto.Mappers;
 
 public enum ERole {
     STUDENT {

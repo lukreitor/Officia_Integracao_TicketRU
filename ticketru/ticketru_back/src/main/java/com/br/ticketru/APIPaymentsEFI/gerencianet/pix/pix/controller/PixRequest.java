@@ -1,4 +1,4 @@
-package br.com.Gabriel.APIPaymentsEFI.gerencianet.pix.pix.controller;
+package com.br.ticketru.APIPaymentsEFI.gerencianet.pix.pix.controller;
 
 @lombok.Getter
 @lombok.Setter

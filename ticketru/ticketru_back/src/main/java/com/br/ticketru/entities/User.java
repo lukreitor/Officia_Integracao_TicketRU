@@ -1,4 +1,4 @@
-package br.com.Gabriel.entities;
+package com.br.ticketru.entities;
 
 import jakarta.persistence.Column;
 
@@ -26,16 +26,13 @@ import org.hibernate.annotations.Where;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import br.com.Gabriel.dto.Mappers.*;
+import com.br.ticketru.dto.Mappers.*;
 
 import lombok.Getter;
 import lombok.Setter;
-import java.io.Serializable;
 
 @Entity
 @Getter
@@ -43,7 +40,7 @@ import java.io.Serializable;
 @Table(name = "users")
 @SQLDelete(sql = "UPDATE users SET deleted=true WHERE id = ?")
 @Where(clause = "deleted = false")
-public class User implements Serializable, UserDetails {
+public class User implements UserDetails {
 
     /**
      * 

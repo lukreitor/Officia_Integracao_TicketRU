@@ -1,4 +1,4 @@
-package br.com.Gabriel.controller;
+package com.br.ticketru.controller;
 
 import java.util.List;
 
@@ -12,20 +12,18 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.Gabriel.dto.ApiResponseDTO;
-import br.com.Gabriel.dto.AuthenticationUserDTO;
-import br.com.Gabriel.dto.TokenResponseDTO;
-import br.com.Gabriel.dto.Exceptions.HandlerException;
-import br.com.Gabriel.entities.*;
-
-import br.com.Gabriel.services.UserService;
-import br.com.Gabriel.services.UtilityService;
+import com.br.ticketru.dto.ApiResponseDTO;
+import com.br.ticketru.dto.AuthenticationUserDTO;
+import com.br.ticketru.dto.TokenResponseDTO;
+import com.br.ticketru.dto.Exceptions.HandlerException;
+import com.br.ticketru.entities.User;
+import com.br.ticketru.services.UserService;
+import com.br.ticketru.services.UtilityService;
 
 //localhost:8080/users/create
 @RestController

@@ -1,4 +1,4 @@
-package br.com.Gabriel.APIPaymentsEFI.gerencianet.pix.pix.controller;
+package com.br.ticketru.APIPaymentsEFI.gerencianet.pix.pix.controller;
 
 import java.io.FileNotFoundException;
 import java.text.DecimalFormat;
@@ -28,9 +28,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.br.ticketru.APIPaymentsEFI.gerencianet.pix.service.PixService;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
-import br.com.Gabriel.APIPaymentsEFI.gerencianet.pix.service.PixService;
 
 @RestController
 @RequestMapping("/pix")

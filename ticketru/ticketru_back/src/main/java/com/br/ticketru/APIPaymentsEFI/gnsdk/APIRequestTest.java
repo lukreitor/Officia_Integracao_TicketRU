@@ -1,4 +1,4 @@
-package br.com.Gabriel.APIPaymentsEFI.gnsdk;
+package com.br.ticketru.APIPaymentsEFI.gnsdk;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.times;
@@ -49,49 +49,48 @@ public class APIRequestTest {
     }
 
     @Test
-	public void shouldRequestSuccessfully() throws AuthorizationException, GerencianetException, IOException
-	{
-		when(authenticator.getExpires()).thenReturn(new Date(new Date().getTime() + 500));
-		JSONObject options = new JSONObject();
-		options.put("baseUri", "https://sandbox.gerencianet.com.br");
-		JSONObject body = mock(JSONObject.class);
-		
-		when(config.getOptions()).thenReturn(options);
-		
-		apiRequester = new APIRequest(authenticator, requester, body);
-		apiRequester.send(); // "post", "/v1/charge", 
-		verify(requester, times(1)).send(body);
-		
-	}
+    public void shouldRequestSuccessfully() throws AuthorizationException, GerencianetException, IOException {
+        when(authenticator.getExpires()).thenReturn(new Date(new Date().getTime() + 500));
+        JSONObject options = new JSONObject();
+        options.put("baseUri", "https://sandbox.gerencianet.com.br");
+        JSONObject body = mock(JSONObject.class);
+
+        when(config.getOptions()).thenReturn(options);
+
+        apiRequester = new APIRequest(authenticator, requester, body);
+        apiRequester.send(); // "post", "/v1/charge",
+        verify(requester, times(1)).send(body);
+
+    }
 
     @Test
-	public void shouldReauthorizeExpiredToken() throws AuthorizationException, GerencianetException, IOException{
-		when(authenticator.getExpires()).thenReturn(new Date());
-		JSONObject options = new JSONObject();
-		options.put("baseUri", "https://sandbox.gerencianet.com.br");
-		JSONObject body = mock(JSONObject.class);
-		
-		when(config.getOptions()).thenReturn(options);
-		
-		apiRequester = new APIRequest(authenticator, requester, body);
-		apiRequester.send();
-		verify(authenticator, times(1)).authorize();
-		verify(requester, times(1)).send(body);
-	}
+    public void shouldReauthorizeExpiredToken() throws AuthorizationException, GerencianetException, IOException {
+        when(authenticator.getExpires()).thenReturn(new Date());
+        JSONObject options = new JSONObject();
+        options.put("baseUri", "https://sandbox.gerencianet.com.br");
+        JSONObject body = mock(JSONObject.class);
+
+        when(config.getOptions()).thenReturn(options);
+
+        apiRequester = new APIRequest(authenticator, requester, body);
+        apiRequester.send();
+        verify(authenticator, times(1)).authorize();
+        verify(requester, times(1)).send(body);
+    }
 
     @Test
-	public void shouldReauthorizeNullToken() throws AuthorizationException, GerencianetException, IOException{
-		when(authenticator.getExpires()).thenReturn(null);
-		JSONObject options = new JSONObject();
-		options.put("baseUri", "https://sandbox.gerencianet.com.br");
-		JSONObject body = mock(JSONObject.class);
-		when(config.getOptions()).thenReturn(options);
-		
-		apiRequester = new APIRequest(authenticator, requester, body);
-		apiRequester.send();
-		verify(authenticator, times(1)).authorize();
-		verify(requester, times(1)).send(body);
-	}
+    public void shouldReauthorizeNullToken() throws AuthorizationException, GerencianetException, IOException {
+        when(authenticator.getExpires()).thenReturn(null);
+        JSONObject options = new JSONObject();
+        options.put("baseUri", "https://sandbox.gerencianet.com.br");
+        JSONObject body = mock(JSONObject.class);
+        when(config.getOptions()).thenReturn(options);
+
+        apiRequester = new APIRequest(authenticator, requester, body);
+        apiRequester.send();
+        verify(authenticator, times(1)).authorize();
+        verify(requester, times(1)).send(body);
+    }
 
     @Test
     public void shouldReauthorizeWhenServerRespondsWithAuthError()

@@ -1,4 +1,4 @@
-package br.com.Gabriel.services;
+package com.br.ticketru.services;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,13 +7,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Service;
 
-import br.com.Gabriel.entities.Pedido;
-import br.com.Gabriel.entities.User;
-import br.com.Gabriel.repositories.PedidoRepository;
-import br.com.Gabriel.repositories.UserRepository;
-import br.com.Gabriel.utils.*;
-import br.com.Gabriel.dto.Exceptions.HandlerException;
-import br.com.Gabriel.dto.Mappers.*;
+import com.br.ticketru.dto.Exceptions.HandlerException;
+import com.br.ticketru.dto.Mappers.EStatus;
+import com.br.ticketru.entities.Pedido;
+import com.br.ticketru.entities.User;
+
+import com.br.ticketru.repositories.PedidoRepository;
+import com.br.ticketru.repositories.UserRepository;
 
 import jakarta.transaction.Transactional;
 
@@ -126,7 +126,6 @@ public class PedidoService {
     public static void main(String args[]) {
 
         PedidoService pedidoService = new PedidoService();
-        Pedido pedido = new Pedido();
 
         // System.out.println(pedidoService.findAllPedidosByRa("23"));
         // findall

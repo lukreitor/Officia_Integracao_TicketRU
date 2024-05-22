@@ -1,22 +1,21 @@
-package br.com.Gabriel.utils;
+package com.br.ticketru.utils;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 
-
 @Component
 public class HashManagerUtils {
- 
-    private HashManagerUtils(){
-	}
-    
+
+    private HashManagerUtils() {
+    }
+
     private static BCryptPasswordEncoder bCrypt = new BCryptPasswordEncoder();
 
-	public static String generateCrypt(String password) {
+    public static String generateCrypt(String password) {
         return bCrypt.encode(password);
     }
 
-    public static Boolean validateHash(String userPwd, String hashedPwd){
+    public static Boolean validateHash(String userPwd, String hashedPwd) {
         return bCrypt.matches(userPwd, hashedPwd);
     }
 }
