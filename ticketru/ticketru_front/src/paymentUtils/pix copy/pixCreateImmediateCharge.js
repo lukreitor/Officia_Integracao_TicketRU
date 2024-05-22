@@ -12,7 +12,7 @@ let body = {
     valor: {
         original: '123.45'
     },
-    chave: 'acbf2098-fc24-4e9d-ace8-6b99fd5dee24', // Informe sua chave Pix cadastrada na gerencianet	//o campo abaixo é opcional
+    chave: 'SUACHAVEPIX', // Informe sua chave Pix cadastrada na gerencianet
     infoAdicionais: [
         {
             nome: 'Pagamento em',
@@ -25,14 +25,10 @@ let body = {
     ]
 };
 
-let params = {
-    txid: 'dt9BHlyzrb5jrFNAdfEDVpHgiOmDbVq111'
-};
-
 const gerencianet = new Gerencianet(options);
 
 gerencianet
-    .pixCreateCharge(params, body)
+    .pixCreateImmediateCharge([], body)
     .then((resposta) => {
         console.log(resposta);
     })
